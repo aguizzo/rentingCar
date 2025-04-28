@@ -19,11 +19,11 @@ export const config: ViewConfig = {
 };
 
 const sampleCar: Car = {
-  id: "123",
+  id: "1234",
   make: "Toyota",
   model: "Camry",
   year: 2025,
-  color: "Blue",
+  color: "Red",
   isRented: false,
   price: 40000
 };

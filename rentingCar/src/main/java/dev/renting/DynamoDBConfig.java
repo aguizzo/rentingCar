@@ -21,15 +21,12 @@ public class DynamoDBConfig {
     private String secretKey;*/
 
     //@Value("${aws.region}")
-    @Value("${aws.region:eu-central-1}")
-    private String region;
+//    @Value("${aws.region:eu-central-1}")
+//    private String region;
 
     @Bean
     public DynamoDbClient dynamoDbClient() {
-        return DynamoDbClient.builder()
-                .credentialsProvider(DefaultCredentialsProvider.create())
-                .region(Region.of(region))
-                .build();
+        return DynamoDbClient.create();
     }
     @Bean
     public DynamoDbEnhancedClient dynamoDbEnhancedClient(DynamoDbClient dynamoDbClient) {
