@@ -8,7 +8,7 @@ export const config: ViewConfig = { menu: { order: 2, icon: 'line-awesome/svg/li
 export default function BookingsView() {
     const sampleBooking : Booking = {
         userId: "USER#2024#001",
-        operation: "booking#2025#001",
+        operation: "booking#2025#002",
         status: "ACTIVE",
         startDate: "2025-10-01",
         endDate: "2025-10-15",

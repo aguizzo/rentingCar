@@ -2,5 +2,5 @@
 package dev.renting.users;
 
 public interface UserRepository {
-    <T> void save (T item);
+    <T extends UserTableItem> void save(T item);
 }

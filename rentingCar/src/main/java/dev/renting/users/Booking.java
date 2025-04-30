@@ -4,13 +4,9 @@ import dev.renting.delegations.Car;
 import dev.renting.delegations.Delegation;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
-import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
-import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 @DynamoDbBean
-public class Booking {
-    private String userId;
-    private String operation;
+public class Booking extends UserTableItem {
     private String status;
     private String startDate;
     private String endDate;
@@ -20,24 +16,6 @@ public class Booking {
     private Car car;
     private Delegation pickUpDelegation;
     private Delegation deliveryDelegation;
-
-    @DynamoDbPartitionKey
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    @DynamoDbSortKey
-    public String getOperation() {
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
 
     @DynamoDbAttribute("status")
     public String getStatus() {

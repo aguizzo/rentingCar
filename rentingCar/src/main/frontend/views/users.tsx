@@ -9,7 +9,7 @@ export const config: ViewConfig = {
 };
 
 const sampleUser: User = {
-  userId: "USER#2024#001",
+  userId: "USER#2024#003",
   operation: "profile",
   username: "jdoe",
   email: "jdoe@example.com",
